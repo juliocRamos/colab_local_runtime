@@ -1,1 +1,0 @@
-jupyter_http_over_ws extension initialized. Listening on /http_over_websocket

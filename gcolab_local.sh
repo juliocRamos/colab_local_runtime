@@ -1,19 +1,19 @@
 #! /bin/bash
 ####################################################
-#Install and configure enviornment to work         #
-#with google colab and local gdrive folders        #
+#   Install and configure enviornment to work      #
+#   with google colab and local gdrive folders     #
 ####################################################
-#v1.0 (Alpha)			   		                   #
+#                 v1.0 (Alpha)			    #
 ####################################################
-#Author  Júlio César Ramos			               #
-#GitHub  juliocRamos				               #
-#E-mail  julio.ramos789@gmail.com		           #
+#           Author Júlio César Ramos      	    #
+#             GitHub  juliocRamos		    #
+#       E-mail  julio.ramos789@gmail.com           #
 ####################################################
-#Last updated date: 16/06/2019		               #
-#Tested on Ubuntu 18.04 LTS 		               #
+#       Last updated date: 16/06/2019		    #
+#        Tested on Ubuntu 18.04 LTS 		    #
 ####################################################
 
-FILE="/home/jramos/.bashrc"
+FILE="your_path_to_.bashrc"
 PORT=8888
 DATE=$(date +%F_%H_00)
 LOG_FILE=log_"$DATE".txt
@@ -55,9 +55,9 @@ if [ "$answer" = "y" -o "$answer" = "Y" ] ; then
 				       install_odrive_unofficial=$(sudo snap install odrive-unofficial)&
 				       wait $install_odrive_unofficial
 			       fi
-			       if [ $(grep -q "#gcolab_local_runtime" "$FILE") ]; then
-				       printf "Generating alias to authenticate and start connection with google colab servers...\n"
-				       `printf "\n#gcolab_local_runtime\nalias gcolab_local_runtime='jupyter notebook --NotebookApp.allow_origin='https://colab.research.google.com' --port=$PORT  --NotebookApp.port_retries=0'" >> "$FILE"`
+			       if [ $(grep -q "gcolab_local_runtime" "$FILE") ]; then
+				       printf "Generating alias to start Google Colab local runtime...\n"
+				       `printf "\ngcolab_local_runtime\nalias gcolab_local_runtime='jupyter notebook --NotebookApp.allow_origin='https://colab.research.google.com' --port=$PORT  --NotebookApp.port_retries=0'" >> "$FILE"`
 		       		else
 					printf "\nAlias already exist in file "$FILE"\n"
 				fi

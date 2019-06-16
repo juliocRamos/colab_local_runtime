@@ -1,16 +1,16 @@
 #! /bin/bash
 ####################################################
-#	Install and configure enviornment to work      #
-#	with google colab and local gdrive folders     #
+#Install and configure enviornment to work         #
+#with google colab and local gdrive folders        #
 ####################################################
-#       	       v1.0 (Alpha)			   		   #
+#v1.0 (Alpha)			   		                   #
 ####################################################
-# 			Author  Júlio César Ramos			   #
-# 				GitHub  juliocRamos				   #
-# 		 E-mail  julio.ramos789@gmail.com		   #
+#Author  Júlio César Ramos			               #
+#GitHub  juliocRamos				               #
+#E-mail  julio.ramos789@gmail.com		           #
 ####################################################
-# 			Last updated date: 12/05/2019		   #
-# 			  Tested on Ubuntu 18.04 LTS 		   #
+#Last updated date: 16/06/2019		               #
+#Tested on Ubuntu 18.04 LTS 		               #
 ####################################################
 
 FILE="/home/jramos/.bashrc"
